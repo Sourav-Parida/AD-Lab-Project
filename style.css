@@ -146,9 +146,9 @@
     user-select: none;
   
     & .btn {
-      background-color: rgba(255,255,255,0.5);
-      color: rgba(0,0,0,0.7);
-      border: 2px solid rgba(0,0,0,0.6);
+      /* background-color: rgba(255,255,255,0.5); */
+      /* color: rgba(0,0,0,0.7); */
+      /* border: 2px solid rgba(0,0,0,0.6); */
       margin: 0 0.25rem;
       padding: .75rem;
       border-radius: 50%;
@@ -221,7 +221,7 @@ nav {
     border-radius: 15px;
     border-style:solid;
     border-color: #63151500;
-    background-color: #1d1b318c;
+    /* background-color: #1d1b318c; */
     border-left: transparent;
     border-right: transparent;
     margin: 20px 10px; 

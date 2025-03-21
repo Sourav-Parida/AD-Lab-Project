@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
-    const movieIds = [603692,1118224,396535,299534,1112426]; // Movie IDs
-    const tvIds = [71446,219937,127532, 76479,37680,37854]; // TV Show IDs
+    const movieIds = [106646,337339,945961,911430,603692,396535,1112426]; // Movie IDs
+    const tvIds = [219937,71446,127532, 76479,37680,37854]; // TV Show IDs
     const slider = document.querySelector('.slider');
 
     // Function to fetch and append content
@@ -170,6 +170,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         slider.appendChild(item);
       }
     }
+
     // Fetch and append movies
     for (const movieId of movieIds) {
       const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
