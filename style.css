@@ -71,10 +71,10 @@
       
     }
   
-    &:nth-child(3) { left: 40%;  }
-    &:nth-child(4) { left: calc(40% + 220px); }
-    &:nth-child(5) { left: calc(40% + 440px); }
-    &:nth-child(6) { left: calc(40% + 660px); }
+    &:nth-child(3) { left: 60%;  }
+    &:nth-child(4) { left: calc(60% + 200px); }
+    &:nth-child(5) { left: calc(60% + 400px); }
+    &:nth-child(6) { left: calc(60% + 600px); }
     &:nth-child(n+7) {
       left: calc(40% + 880px); 
   }

@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
-    const movieIds = [106646,337339,945961,911430,603692,396535,1112426]; // Movie IDs
+    const movieIds = [106646,324552,911430,396535,945961,1112426]; // Movie IDs
     const tvIds = [219937,71446,127532, 76479,37680,37854]; // TV Show IDs
     const slider = document.querySelector('.slider');
 
