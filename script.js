@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
-    const movieIds = [396535, 157336, 299534,603692]; // Movie IDs
-    const tvIds = [1396, 37854, 76479,127532]; // TV Show IDs
+    const movieIds = [1118224,396535, 603692,299534,1112426]; // Movie IDs
+    const tvIds = [71446,219937,127532, 76479,37680,37854]; // TV Show IDs
     const slider = document.querySelector('.slider');
 
     // Function to fetch and append content
@@ -196,24 +196,24 @@ document.addEventListener('DOMContentLoaded', function() {
   function activate(e) {
     let inx = 0;
     const items = document.querySelectorAll('.item');
-    
-    if (e.target.matches('.next')) {
+
+    if (e.target.matches('.next') || e.key === 'ArrowRight') {
       slider.append(items[0]);
       inx = 2;
     }
-    if (e.target.matches('.prev')) {
+    if (e.target.matches('.prev') || e.key === 'ArrowLeft') {
       slider.prepend(items[items.length - 1]);
     }
 
     items.forEach(item => {
       item.style.opacity = 1;
-    });  
+    });
     document.querySelector(`.slider .item:nth-child(${a})`).style.opacity = 0;
 
     nav.addEventListener('mouseenter', () => {
       items.forEach(item => {
         item.style.opacity = 1;
-      });    
+      });
       document.querySelector(`.slider .item:nth-child(6)`).style.opacity = 0;
     });
 
@@ -228,8 +228,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Click event listener for navigation
   nav.addEventListener('click', activate);
+
+  // Keyboard event listener for arrow key navigation
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      activate(event);
+    }
+  });
 });
+
 
 // Sidebar logic remains unchanged//
 let sidebar = document.querySelector(".sidebar");
